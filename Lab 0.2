@@ -1,0 +1,23 @@
+import random
+import string
+
+def generate_random_email():
+    name = ''.join(random.choices(string.ascii_lowercase, k=8)) # генерация случайного имени
+    domain = ''.join(random.choices(string.ascii_lowercase, k=6)) # генерация случайного домена
+    local = ''.join(random.choices(string.ascii_lowercase, k=3)) # генерация случайной локальной части
+    email = f"{name}@{domain}.{local}" # создание email адреса
+    return email
+
+try:
+    choice = int(input("Выбери номер задачи(1 или 2) или отрицательное число для выхода:"))
+except ValueError:
+    print("error")
+if choice == 1:
+    print("Первое задание")
+    print("Сгенерированная почта в формате: <name>@<domen>.<local> - ", generate_random_email())
+elif choice == 2:
+    print("Второе задание")
+elif type(choice) != type(int):
+    print("Это не число")
+else:
+    print("Число находится вне диапазона")
