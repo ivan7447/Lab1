@@ -48,7 +48,7 @@ def show_worst_grade(student):
         if grade == worst_grade:
             print(f"{surname} {name} - {subject}: {grade}")
 
-5def exercise_2():
+def exercise_2():
     # заполнение списка студентов
     students_number = int(input("Введите количество студентов в группе: "))
     for i in range(students_number):
